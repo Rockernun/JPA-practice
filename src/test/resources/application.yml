@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create  # 애플리케이션 실행 시점에 테이블을 지우고 재생성
+    properties:
+      hibernate:
+#      show_sql: true
+        format_sql: true
+    open-in-view: false
+
+logging:
+  level:
+    org.hibernate.SQL: debug
